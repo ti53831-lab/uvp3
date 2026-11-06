@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UVP Puebla - Proyecto Universidad</title>
+    
+    <!-- CSS BÁSICO ESTILO 1ER SEMESTRE -->
+    <style>
+        /* Estilos Generales */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333333;
+        }
+
+        /* Encabezado */
+        header {
+            background-color: #002B49; /* Azul Marino Institutional */
+            color: white;
+            text-align: center;
+            padding: 20px 10px;
+            border-bottom: 5px solid #D4AF37; /* Amarillo/Dorado */
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        header h2 {
+            margin: 5px 0 0 0;
+            font-weight: normal;
+            font-size: 18px;
+            color: #D4AF37;
+        }
+
+        /* Menú de Navegación */
+        nav {
+            background-color: #1a4260;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+        }
+
+        nav ul li a {
+            display: block;
+            color: white;
+            padding: 12px 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            background-color: #D4AF37;
+            color: #002B49;
+        }
+
+        /* Contenedor Principal */
+        .container {
+            width: 80%;
+            max-width: 900px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 25px;
+            border: 1px solid #cccccc;
+            box-shadow: 0px 0px 8px #bbb;
+        }
+
+        /* Secciones */
+        section {
+            margin-bottom: 30px;
+        }
+
+        h3 {
+            color: #002B49;
+            border-bottom: 2px solid #002B49;
+            padding-bottom: 5px;
+        }
+
+        /* Imagen de Bienvenida */
+        .banner-img {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+            border: 1px solid #ddd;
+            margin-top: 10px;
+        }
+
+        /* Tabla de Oferta Académica */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        table, th, td {
+            border: 1px solid #999999;
+        }
+
+        th {
+            background-color: #002B49;
+            color: white;
+            padding: 10px;
+            text-align: left;
+        }
+
+        td {
+            padding: 8px 10px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        /* Formulario de Contacto */
+        form {
+            background-color: #f2f5f8;
+            padding: 15px;
+            border: 1px solid #d0d7de;
+            border-radius: 5px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 98%;
+            padding: 8px;
+            font-family: Arial, sans-serif;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        button {
+            background-color: #002B49;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 15px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+
+        button:hover {
+            background-color: #D4AF37;
+            color: #002B49;
+            font-weight: bold;
+        }
+
+        /* Mensaje de respuesta del formulario */
+        #mensaje-respuesta {
+            display: none;
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+            border-radius: 3px;
+        }
+
+        /* Pie de Página */
+        footer {
+            background-color: #002B49;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ENCABEZADO CON TÍTULO Y SUBTÍTULO -->
+    <header>
+        <h1>Universidad del Valle de Puebla (UVP)</h1>
+        <h2>Campus Puebla</h2>
+    </header>
+
+    <!-- MENÚ DE NAVEGACIÓN SENCILLO -->
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#oferta">Oferta Académica</a></li>
+            <li><a href="#porque">¿Por qué UVP?</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- CONTENIDO PRINCIPAL DE LA PÁGINA -->
+    <div class="container">
+
+        <!-- SECCIÓN 1: BIENVENIDA -->
+        <section id="inicio">
+            <h3>Bienvenidos a la UVP</h3>
+            <p>La Universidad del Valle de Puebla es una institución educativa comprometida con la formación integral de profesionistas con valores, conocimientos prácticos y visión hacia el futuro.</p>
+            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80" alt="Instalaciones UVP Puebla" class="banner-img">
+        </section>
+
+        <!-- SECCIÓN 2: OFERTA ACADÉMICA (TABLA HTML ESTÁNDAR) -->
+        <section id="oferta">
+            <h3>Oferta Académica</h3>
+            <p>Contamos con diversos programas de estudio repartidos por áreas académicas:</p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nivel / Área</th>
+                        <th>Carreras Disponibles</th>
+                        <th>Duración</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Licenciaturas</strong></td>
+                        <td>Derecho, Administración, Diseño Gráfico</td>
+                        <td>4 Años</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Área de la Salud</strong></td>
+                        <td>Medicina Cirujano, Enfermería, Nutrición</td>
+                        <td>4 - 5 Años</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Ingenierías</strong></td>
+                        <td>Sistemas Computacionales, Industrial, Mecatrónica</td>
+                        <td>4 Años</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Posgrados</strong></td>
+                        <td>Maestrías en Administración, Educación y Derecho</td>
+                        <td>2 Años</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- SECCIÓN 3: POR QUÉ ESTUDIAR EN LA UVP (LISTA DE VIÑETAS) -->
+        <section id="porque">
+            <h3>¿Por qué estudiar en la UVP?</h3>
+            <ol>
+                <li><strong>Excelencia académica:</strong> Profesores altamente capacitados con experiencia en el campo laboral.</li>
+                <li><strong>Instalaciones modernas:</strong> Laboratorios equipados, biblioteca física y digital, y áreas deportivas.</li>
+                <li><strong>Ubicación céntrica:</strong> Campus ubicado estratégicamente en la ciudad de Puebla.</li>
+                <li><strong>Convenios e intercambios:</strong> Opciones para realizar prácticas profesionales e intercambios académicos.</li>
+            </ol>
+        </section>
+
+        <!-- SECCIÓN 4: FORMULARIO BÁSICO DE CONTACTO -->
+        <section id="contacto">
+            <h3>Formulario de Contacto</h3>
+            <p>Si deseas recibir más información sobre inscripciones o becas, llena el siguiente formulario:</p>
+
+            <form id="formularioContacto" onsubmit="enviarFormulario(event)">
+                <div class="form-group">
+                    <label for="nombre">Nombre Completo:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="correo">Correo Electrónico:</label>
+                    <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensaje">Mensaje o Carrera de Interés:</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe aquí tu duda..." required></textarea>
+                </div>
+
+                <button type="submit">Enviar Información</button>
+            </form>
+
+            <!-- Cuadro de confirmación simple -->
+            <div id="mensaje-respuesta">
+                ¡Gracias por contactar a la UVP Puebla! Te responderemos pronto.
+            </div>
+        </section>
+
+    </div>
+
+    <!-- PIE DE PÁGINA SENCILLO -->
+    <footer>
+        <p>&copy; 2026 Universidad del Valle de Puebla - Campus Puebla</p>
+        <p>Dirección: Calle 3 Sur 5759, El Carmen, Puebla, Pue. | Teléfono: 222 266 9488</p>
+    </footer>
+
+    <!-- JAVASCRIPT BÁSICO -->
+    <script>
+        // Función simple para procesar el envío del formulario
+        function enviarFormulario(event) {
+            // Evitamos que la página se recargue
+            event.preventDefault();
+
+            // Mostramos el mensaje de respuesta en la pantalla
+            var cuadroRespuesta = document.getElementById("mensaje-respuesta");
+            cuadroRespuesta.style.display = "block";
+
+            // Limpiamos los campos del formulario
+            document.getElementById("formularioContacto").reset();
+        }
+    </script>
+</body>
+</html>
